@@ -10,11 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 
    private WebDriver driver;
-
-
     public HomePage(WebDriver driver){
         this.driver=driver;
     }
+
+    public void clickLink(String linktext){
+        driver.findElement(By.linkText(linktext)).click();
+    }
+
     public LoginPage clickFormAuthentication(){
         clickLink("Form Authentication");
         return new LoginPage(driver);
@@ -27,9 +30,11 @@ public class HomePage {
         clickLink("Dropdown");
         return new DropdownPage(driver);
     }
-
-    public void clickLink(String linktext){
-        driver.findElement(By.linkText(linktext)).click();
+    public HoversPage clickHoversLink(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
     }
+
+
 
 }

@@ -10,7 +10,7 @@ public class DropdownTest extends BaseTests {
     public void dropdownTest(){
         DropdownPage dropdownPage = homePage.clickDropdownLink();
         dropdownPage.clickDropdownMenu();
-        dropdownPage.selectFromDropdown("2");
+        dropdownPage.selectFromDropdown("1");
 
     }
 }

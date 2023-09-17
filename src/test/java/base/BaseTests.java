@@ -28,8 +28,8 @@ public class BaseTests {
         homePage = new HomePage(driver);
     }
 
-//    @AfterClass
-//    public static void quit(){
-//        driver.quit();
-//    }
+    @AfterClass
+    public static void quit(){
+        driver.quit();
+    }
 }
